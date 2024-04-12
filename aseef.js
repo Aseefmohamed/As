@@ -1,12 +1,26 @@
-const accountSid = 'ACda4b698b17d826a87973bc90821240c9';
-const authToken = '6c6ff41193b1633cd6e4147c712c901b';
-const client = require('twilio')(accountSid, authToken);
+const nodemailer = require('nodemailer');
 
-client.messages
-  .create({
-    body: 'Warning your frd croborder!',
-    from: '+12513698431',
-    to: '+918015868478'
-  })
-  .then(message => console.log(message.sid))
-  .catch(error => console.error(error));
+// Create a transporter object using SMTP transport
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'mrinteltv2020@gmail.com',
+        pass: 'Aseef@04'
+    }
+});
+
+// Setup email data
+let mailOptions = {
+    from: 'mrinteltv2020@gmail.com',
+    to: 'mohamaseef@gmail.com',
+    subject: 'Test Email',
+    text: 'Hello, this is a test email!'
+};
+
+// Send mail with defined transport object
+transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        return console.log(error);
+    }
+    console.log('Message sent: %s', info.messageId);
+});
