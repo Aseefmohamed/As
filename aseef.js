@@ -4,14 +4,16 @@ const nodemailer = require('nodemailer');
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'mohamaseef@gmail.com',
-        pass: 'jqrv khay mtkh utdz'
+        user: 'fishermanhelp@gmail.com
+',
+        pass: 'axpf fodb bfbx pvcz'
     }
 });
 
 // Setup email data
 let mailOptions = {
-    from: 'mohamaseef@gmail.com',
+    from: 'fishermanhelp@gmail.com
+',
     to: 'mrinteltv2020@gmail.com',
     subject: 'Alert! Your Friend Crossed the Border',
     text: 'Alert! Alert! Your Friend Crossed the border while fishing. Make sure legal remedies to save your friend'
