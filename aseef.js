@@ -12,7 +12,7 @@ let transporter = nodemailer.createTransport({
 // Setup email data
 let mailOptions = {
     from: 'fishermanhelp@gmail.com',
-    to: 'mrinteltv2020@gmail.com',
+    to: 'mrinteltv2020@gmail.com, hemkumar251102@gmail.com',
     subject: 'Alert! Your Friend Crossed the Border',
     text: 'Alert! Alert! Your Friend Crossed the border while fishing. Make sure legal remedies to save your friend'
 };
